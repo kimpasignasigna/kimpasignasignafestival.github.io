@@ -4,67 +4,210 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Philippine Festival</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #913a92;
+    }
+
+    header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 800;
+      user-select: none;
+    }
+
+    .logo span {
+      color: #f9a03f;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      border-bottom-color: #f9a03f;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      width: 160px;
+      padding: 8px 0;
+      z-index: 1000;
+    }
+
+    .dropdown:hover ul {
+      display: flex;
+    }
+
+    .dropdown ul a {
+      color: #444;
+      padding: 10px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown ul a:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Section */
+    section {
+      padding: 60px 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      background: #0c7a6e;
+      max-width: 1100px;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    .text-content {
+      flex: 1;
+      padding: 48px 32px;
+      color: white;
+    }
+
+    .text-content h2 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .text-content h1 {
+      font-size: 2rem;
+      color: black;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .text-content p {
+      font-size: 0.95rem;
+      color: #ffffffcc;
+    }
+
+    .image-content {
+      flex: 1;
+      height: 280px;
+      width: 100%;
+    }
+
+    .image-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+      .content-wrapper {
+        flex-direction: row;
+      }
+
+      .text-content {
+        padding: 64px;
+      }
+
+      .text-content h1 {
+        font-size: 2.8rem;
+      }
+
+      .image-content {
+        height: auto;
+      }
+    }
+
+    @media (max-width: 500px) {
+      nav ul {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
-    <div class="text-white font-extrabold text-xl select-none">
-      Festival<span class="text-[#f9a03f]">.</span>
-    </div>
-    <nav>
-      <ul class="flex space-x-6 text-white text-sm font-semibold">
-        <li><a href="welcome.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Welcome</a></li>
-        <li><a href="home.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Home</a></li>
-        <li><a href="about.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">About</a></li>
 
-        <!-- Dropdown -->
-        <li class="relative group">
-          <a href="#" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Categories</a>
-        
-          <!-- Dropdown Menu -->
-          <ul class="absolute left-0 mt-1 w-40 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-10 flex flex-col">
-            <li><a href="sinulog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sinulog</a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Ati-Atihan</a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Panagbenga</a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Pahiyas</a></li>
+  <!-- Header -->
+  <header>
+    <div class="logo">Festival<span>.</span></div>
+    <nav>
+      <ul>
+        <li><a href="welcome.html">Welcome</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="#">Categories</a>
+          <ul>
+            <li><a href="sinulog.html">Sinulog</a></li>
+            <li><a href="#">Ati-Atihan</a></li>
+            <li><a href="#">Panagbenga</a></li>
+            <li><a href="#">Pahiyas</a></li>
           </ul>
         </li>
       </ul>
-    </nav>    
+    </nav>
   </header>
 
-  <!-- NEW SECTION -->
-  <section class=" py-15 flex items-center justify-center px-6">
-    <div class="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-stretch bg-[#0c7a6e] shadow-[0_10px_15px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden">
-      
-      <!-- LEFT SIDE (Text) -->
-      <div class="flex-1 flex flex-col justify-center px-8 py-16 md:py-24 md:px-16">
-        <h2 class="text-white text-xl font-semibold mb-2 tracking-wide">
-          Welcome to the Heart of
-        </h2>
-        <h1 class="text-black text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-          Philippine Festivals!
-        </h1>
-        <p class="text-white-600 text-s ">
+  <!-- Section -->
+  <section>
+    <div class="content-wrapper">
+      <div class="text-content">
+        <h2>Welcome to the Heart of</h2>
+        <h1>Philippine Festivals!</h1>
+        <p>
           Experience the vibrant culture, colorful traditions, and the warmth of Filipino hospitality.
           Join us as we celebrate the rich heritage and joyous spirit that make the Philippines' 
-          festivals a unique and unforgettable experience.
-          From the lively street parades to the 
+          festivals a unique and unforgettable experience. From the lively street parades to the 
           delicious local delicacies, there's always something to celebrate!<br>
           Let the festivities begin!
         </p>
       </div>
-
-      <!-- RIGHT SIDE (Image) -->
-      <div class="flex-1 relative w-full h-72 md:h-auto">
-        <img alt="" class="w-full h-full object-cover" height="400" width="600"
-          src="images/festival.png" />
+      <div class="image-content">
+        <img src="images/festival.png" alt="Festival image">
       </div>
     </div>
   </section>
