@@ -4,62 +4,147 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Philippine Festival - Sign Up</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  
+
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e6319a 0%, #829ed8 100%);
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .form-box {
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      width: 20rem;
+      padding: 2rem;
+      padding-top: 4rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      background-color: rgba(10, 38, 98, 0.7);
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group-icon {
+      background-color: #0a2662;
+      padding: 0.75rem;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    }
+
+    .input-group-icon i {
+      color: white;
+      font-size: 1.125rem;
+    }
+
+    .input-group input {
+      background-color: rgba(10, 38, 98, 0.5);
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      flex: 1;
+      outline: none;
+    }
+
+    .input-group input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .signup-btn {
+      position: absolute;
+      bottom: -4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.75rem 5rem;
+      background-color: rgba(255, 255, 255, 0.4);
+      color: white;
+      border: none;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+    }
+
+    .signup-btn:hover {
+      filter: brightness(110%);
+    }
+
+    .user-icon {
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #0a2662;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .user-icon i {
+      color: white;
+      font-size: 3rem;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="min-h-screen flex items-center justify-center" style="background: linear-gradient(135deg, #e6319a 0%, #829ed8 100%)">
-    <div class="relative">
-      <div class="rounded-3xl bg-white bg-opacity-30 backdrop-blur-md w-80 p-8 pt-16 shadow-lg">
-        <form id="signupForm" class="space-y-6">
-          
-          <!-- Full Name Field -->
-          <div class="flex items-center bg-blue-900 bg-opacity-70 rounded">
-            <div class="bg-blue-900 p-3 rounded-l">
-              <i class="fas fa-user text-white text-lg"></i>
-            </div>
-            <input id="signupUsername" type="text" placeholder="Username" required
-              class="bg-blue-900 bg-opacity-50 text-white placeholder-white placeholder-opacity-70 p-3 flex-1 rounded-r focus:outline-none" />
+  <div class="container">
+    <div class="form-box">
+      <form id="signupForm">
+        <!-- Username -->
+        <div class="input-group">
+          <div class="input-group-icon">
+            <i class="fas fa-user"></i>
           </div>
+          <input id="signupUsername" type="text" placeholder="Username" required />
+        </div>
 
-          <!-- Email Field -->
-          <div class="flex items-center bg-blue-900 bg-opacity-70 rounded">
-            <div class="bg-blue-900 p-3 rounded-l">
-              <i class="fas fa-envelope text-white text-lg"></i>
-            </div>
-            <input id="signupEmail" type="email" placeholder="Email" required
-              class="bg-blue-900 bg-opacity-50 text-white placeholder-white placeholder-opacity-70 p-3 flex-1 rounded-r focus:outline-none" />
+        <!-- Email -->
+        <div class="input-group">
+          <div class="input-group-icon">
+            <i class="fas fa-envelope"></i>
           </div>
+          <input id="signupEmail" type="email" placeholder="Email" required />
+        </div>
 
-          <!-- Password Field -->
-          <div class="flex items-center bg-blue-900 bg-opacity-70 rounded">
-            <div class="bg-blue-900 p-3 rounded-l">
-              <i class="fas fa-lock text-white text-lg"></i>
-            </div>
-            <input id="signupPassword" type="password" placeholder="Password" required
-              class="bg-blue-900 bg-opacity-50 text-white placeholder-white placeholder-opacity-70 p-3 flex-1 rounded-r focus:outline-none" />
+        <!-- Password -->
+        <div class="input-group">
+          <div class="input-group-icon">
+            <i class="fas fa-lock"></i>
           </div>
+          <input id="signupPassword" type="password" placeholder="Password" required />
+        </div>
+      </form>
+    </div>
 
-        </form>
-      </div>
+    <!-- Sign Up Button -->
+    <button onclick="signup()" class="signup-btn">SIGNUP</button>
 
-      <!-- SIGN UP Button -->
-      <button onclick="signup()" class="absolute -bottom-16 left-1/2 -translate-x-1/2 rounded-full bg-white/40 text-white text-sm tracking-widest px-20 py-3 hover:brightness-110 transition duration-300">
-        SIGNUP
-      </button>
-
-      <!-- User Icon -->
-      <div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-blue-900 rounded-full w-20 h-20 flex items-center justify-center">
-        <a href="javascript:history.back()">
-          <i class="fas fa-user text-white text-5xl cursor-pointer"></i>
-        </a>
-      </div>
+    <!-- User Icon -->
+    <div class="user-icon">
+      <a href="javascript:history.back()">
+        <i class="fas fa-user"></i>
+      </a>
     </div>
   </div>
 
@@ -70,12 +155,11 @@
       const password = document.getElementById('signupPassword').value;
 
       if (username && email && password) {
-        // Save signup details in localStorage
         localStorage.setItem('signupUsername', username);
         localStorage.setItem('signupPassword', password);
 
         alert('Sign up successful! Redirecting to login...');
-        window.location.href = 'index.html'; // Redirect to Login page
+        window.location.href = 'index.html';
       } else {
         alert('Please fill out all fields!');
       }
