@@ -4,93 +4,247 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Philippine Festival</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Base styles */
     body {
       font-family: "Poppins", sans-serif;
       background-color: #913a92;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      color: white;
+      font-weight: 800;
+      font-size: 2rem;
+    }
+
+    .logo span {
+      color: #f9a03f;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border-bottom: 2px solid #f9a03f;
+      padding-bottom: 4px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px 128px;
+    }
+
+    .hero {
+      background-color: #0c7a6e;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-text {
+      color: white;
+      width: 100%;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .hero-text h1 span:first-child {
+      color: black;
+      font-size: 3.5rem;
+      margin-right: 12px;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      font-weight: 700;
+      color: black;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .hero-text p span:first-child {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .festival-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 64px;
+    }
+
+    .festival-card {
+      background-color: white;
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .festival-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .festival-card h3 {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: black;
+    }
+
+    /* Responsive Layout */
+    @media (min-width: 640px) {
+      header {
+        flex-direction: row;
+      }
+
+      nav ul {
+        flex-direction: row;
+        gap: 24px;
+      }
+
+      .hero-content {
+        flex-direction: row;
+      }
+
+      .hero-text,
+      .hero-image {
+        width: 50%;
+      }
+
+      .festival-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .festival-cards {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+
+      .hero-text h1 span:first-child {
+        font-size: 4.5rem;
+      }
     }
   </style>
 </head>
 
 <body>
   <!-- Header -->
-  <header class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-    <!-- Logo -->
-    <div class="text-white font-extrabold text-3xl sm:text-2xl">
-      Festival<span class="text-[#f9a03f]">.</span>
-    </div>
-
-    <!-- Navigation -->
+  <header>
+    <div class="logo">Festival<span>.</span></div>
     <nav>
-      <ul class="flex flex-col sm:flex-row gap-3 sm:gap-6 text-white text-lg sm:text-sm font-semibold text-center sm:text-left">
-        <li>
-          <a href="login.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Log in</a>
-        </li>
-        <li>
-          <a href="signup.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Sign UP</a>
-        </li>
+      <ul>
+        <li><a href="login.html">Log in</a></li>
+        <li><a href="signup.html">Sign UP</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main -->
-  <main class="max-w-7xl mx-auto px-4 pt-6 pb-32">
+  <main>
     <!-- Hero Section -->
-    <section class="bg-[#0c7a6e] rounded-lg p-6 sm:p-10">
-      <div class="flex flex-col md:flex-row items-center gap-10">
-        <!-- Text Block -->
-        <div class="text-white w-full md:w-1/2">
-          <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 flex flex-wrap">
-            <span class="text-black text-6xl sm:text-8xl">W</span>
-            <span class="ml-2">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>
+            <span>W</span>
+            <span>
               <div>elcome</div>
               <div>to the festival!</div>
             </span>
           </h1>
-          <p class="text-base sm:text-lg font-bold text-black flex mt-4">
-            <span class="text-2xl leading-none mr-2">D</span>
+          <p>
+            <span>D</span>
             <span>
               ive into the vibrant celebrations, explore the rich culture,
               and enjoy the unforgettable experience. We're glad you're here!
             </span>
           </p>
         </div>
-
-        <!-- Image -->
-        <div class="w-full md:w-1/2">
-          <img
-            src="images/fes.jpg"
-            alt="Festival scene"
-            class="w-full h-auto max-w-full object-cover rounded-lg shadow-md"
-          />
+        <div class="hero-image">
+          <img src="images/fes.jpg" alt="Festival scene" />
         </div>
       </div>
     </section>
 
     <!-- Festival Cards -->
-    <section class="mt-16 sm:mt-24">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Sinulog -->
-        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-black text-center">
-          <img src="images/sinulog.jpg" alt="Sinulog" class="w-full h-40 object-cover rounded-md mb-3" />
-          <h3 class="font-extrabold text-lg">Sinulog</h3>
-        </div>
-        <!-- Panagbenga -->
-        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-black text-center">
-          <img src="images/panagbenga.jpg" alt="Panagbenga" class="w-full h-40 object-cover rounded-md mb-3" />
-          <h3 class="font-extrabold text-lg">Panagbenga</h3>
-        </div>
-        <!-- Pahiyas -->
-        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-black text-center">
-          <img src="images/pahiyas.jpeg" alt="Pahiyas" class="w-full h-40 object-cover rounded-md mb-3" />
-          <h3 class="font-extrabold text-lg">Pahiyas</h3>
-        </div>
-        <!-- Kadayawan -->
-        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-black text-center">
-          <img src="images/kadayawan.jpg" alt="Kadayawan" class="w-full h-40 object-cover rounded-md mb-3" />
-          <h3 class="font-extrabold text-lg">Kadayawan</h3>
-        </div>
+    <section class="festival-cards">
+      <div class="festival-card">
+        <img src="images/sinulog.jpg" alt="Sinulog" />
+        <h3>Sinulog</h3>
+      </div>
+      <div class="festival-card">
+        <img src="images/panagbenga.jpg" alt="Panagbenga" />
+        <h3>Panagbenga</h3>
+      </div>
+      <div class="festival-card">
+        <img src="images/pahiyas.jpeg" alt="Pahiyas" />
+        <h3>Pahiyas</h3>
+      </div>
+      <div class="festival-card">
+        <img src="images/kadayawan.jpg" alt="Kadayawan" />
+        <h3>Kadayawan</h3>
       </div>
     </section>
   </main>
