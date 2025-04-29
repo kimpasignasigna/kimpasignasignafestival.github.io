@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Philippine Festival</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #913a92;
+    }
+  </style>
+</head>
+<body>
+  <header class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+    <div class="text-white font-extrabold text-xl select-none">
+      Festival<span class="text-[#f9a03f]">.</span>
+    </div>
+    <nav>
+      <ul class="flex space-x-6 text-white text-sm font-semibold">
+        <li><a href="welcome.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Welcome</a></li>
+        <li><a href="home.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Home</a></li>
+        <li><a href="about.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">About</a></li>
+
+        <!-- Dropdown -->
+        <li class="relative group">
+          <a href="#" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Categories</a>
+        
+          <!-- Dropdown Menu -->
+          <ul class="absolute left-0 mt-1 w-40 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-10 flex flex-col">
+            <li><a href="sinulog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sinulog</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Ati-Atihan</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Panagbenga</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Pahiyas</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>    
+  </header>
+
+  <!-- NEW SECTION -->
+  <section class=" py-15 flex items-center justify-center px-6">
+    <div class="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-stretch bg-[#0c7a6e] shadow-[0_10px_15px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden">
+      
+      <!-- LEFT SIDE (Text) -->
+      <div class="flex-1 flex flex-col justify-center px-8 py-16 md:py-24 md:px-16">
+        <h2 class="text-white text-xl font-semibold mb-2 tracking-wide">
+          Welcome to the Heart of
+        </h2>
+        <h1 class="text-black text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+          Philippine Festivals!
+        </h1>
+        <p class="text-white-600 text-s ">
+          Experience the vibrant culture, colorful traditions, and the warmth of Filipino hospitality.
+          Join us as we celebrate the rich heritage and joyous spirit that make the Philippines' 
+          festivals a unique and unforgettable experience.
+          From the lively street parades to the 
+          delicious local delicacies, there's always something to celebrate!<br>
+          Let the festivities begin!
+        </p>
+      </div>
+
+      <!-- RIGHT SIDE (Image) -->
+      <div class="flex-1 relative w-full h-72 md:h-auto">
+        <img alt="" class="w-full h-full object-cover" height="400" width="600"
+          src="images/festival.png" />
+      </div>
+    </div>
+  </section>
+</body>
+</html>

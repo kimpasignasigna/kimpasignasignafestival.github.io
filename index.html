@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Philippine Festival</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #913a92;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <!-- Logo -->
+    <div class="text-white font-extrabold text-3xl sm:text-2xl">
+      Festival<span class="text-[#f9a03f]">.</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="flex flex-col sm:flex-row gap-3 sm:gap-6 text-white text-lg sm:text-sm font-semibold text-center sm:text-left">
+        <li>
+          <a href=".html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Log in</a>
+        </li>
+        <li>
+          <a href="signup.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Sign UP</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-4 pt-6 pb-32">
+    <!-- Hero Section -->
+    <section class="bg-[#0c7a6e] rounded-lg p-6 sm:p-10">
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <!-- Text Block -->
+        <div class="text-white w-full md:w-1/2">
+          <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 flex flex-wrap">
+            <span class="text-black text-6xl sm:text-8xl">W</span>
+            <span class="ml-2">
+              <div>elcome</div>
+              <div>to the festival!</div>
+            </span>
+          </h1>
+          <p class="text-base sm:text-lg font-bold text-black flex mt-4">
+            <span class="text-2xl leading-none mr-2">D</span>
+            <span>
+              ive into the vibrant celebrations, explore the rich culture,
+              and enjoy the unforgettable experience. We're glad you're here!
+            </span>
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="w-full md:w-1/2">
+          <img
+            src="images/fes.jpg"
+            alt="Festival scene"
+            class="w-full h-auto max-w-full object-cover rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Festival Cards -->
+    <section class="mt-16 sm:mt-24">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Sinulog -->
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-black text-center">
+          <img src="images/sinulog.jpg" alt="Sinulog" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="font-extrabold text-lg">Sinulog</h3>
+        </div>
+        <!-- Panagbenga -->
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-black text-center">
+          <img src="images/panagbenga.jpg" alt="Panagbenga" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="font-extrabold text-lg">Panagbenga</h3>
+        </div>
+        <!-- Pahiyas -->
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-black text-center">
+          <img src="images/pahiyas.jpeg" alt="Pahiyas" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="font-extrabold text-lg">Pahiyas</h3>
+        </div>
+        <!-- Kadayawan -->
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-black text-center">
+          <img src="images/kadayawan.jpg" alt="Kadayawan" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="font-extrabold text-lg">Kadayawan</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

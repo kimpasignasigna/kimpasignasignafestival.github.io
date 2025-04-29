@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Philippine Festival</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #913a92;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+    <div class="text-white font-extrabold text-xl select-none">
+      Festival<span class="text-[#f9a03f]">.</span>
+    </div>
+    <nav>
+      <ul class="flex space-x-6 text-white text-sm font-semibold">
+        <li><a href="welcome.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Welcome</a></li>
+        <li><a href="home.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Home</a></li>
+        <li><a href="about.html" class="hover:underline border-b-2 border-[#f9a03f] pb-1">About</a></li>
+        <!-- Dropdown -->
+        <li class="relative group">
+          <a href="#" class="hover:underline border-b-2 border-[#f9a03f] pb-1">Categories</a>
+        
+          <!-- Dropdown Menu -->
+          <ul class="absolute left-0 mt-1 w-40 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-10 flex flex-col">
+            <li><a href="sinulog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sinulog</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Ati-Atihan</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Panagbenga</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Pahiyas</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>    
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pb-20">
+    <section class="relative bg-[#0c7a6e] pt-12 pb-32 md:pb-20">
+      <div class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6">
+        <div class="text-white max-w-xl ml-12 mt-[-129px]">
+          <h1 class="text-4xl font-extrabold mb-3 leading-tight flex">
+            <span class="text-black text-8xl leading-none">W</span>
+            <div class="ml-2">
+              <div>elcome</div>
+              <div>to the festival!</div>
+            </div>
+          </h1>
+          <p class="text-base font-bold text-black flex items-start">
+            <span class="text-2xl leading-none mr-50">D</span>
+            <span>
+              ive into the vibrant celebrations, explore the rich culture,<br />
+              and enjoy the unforgettable experience. We're glad you're here!
+            </span>
+          </p>
+          
+        </div>
+        <div class="flex-shrink-0">
+
+          <!-- Image welcome -->
+          <img
+            src="images/fes.jpg" 
+            alt="Festival scene"
+            width="510"
+            height="300"
+          />
+        </div>
+      </div>
+
+      <!-- Boxes container -->
+
+<div class="absolute left-1/2 transform -translate-x-1/2 bottom-[-1rem] w-full max-w-7xl px-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 -mb-16">
+    <div class="bg-[white] rounded-lg p-8 flex flex-col items-center text-black shadow-lg">
+
+      <!-- Image inside box -->                            
+      <img src="images/sinulog.jpg" alt="Description" class="mb-1 w-50 h-30 object-cover" />
+      <i class="fas fa-chalkboard fa-2x mb-4"></i>
+      <h3 class="font-extrabold text-lg text-center">Sinulog</h3>
+    </div>
+    <div class="bg-[white] rounded-lg p-8 flex flex-col items-center text-black shadow-lg">
+
+      <!-- Image inside box -->                               
+      <img src="images/panagbenga.jpg" alt="Description" class="mb-1 w-50 h-30 object-cover" />
+      <i class="fas fa-gem fa-2x mb-4"></i>
+      <h3 class="font-extrabold text-lg text-center">Panagbenga</h3>
+    </div>
+    <div class="bg-[white] rounded-lg p-8 flex flex-col items-center text-black shadow-lg">
+
+      <!-- Image inside box -->                              
+      <img src="images/pahiyas.jpeg" alt="Description" class="mb-1 w-50 h-30 object-cover" />
+      <i class="fas fa-map-marker-alt fa-2x mb-4"></i>
+      <h3 class="font-extrabold text-lg text-center">Pahiyas</h3>
+    </div>
+    <div class="bg-[white] rounded-lg p-8 flex flex-col items-center text-black shadow-lg">
+
+      <!-- Image inside box -->                               
+      <img src="images/kadayawan.jpg" alt="Description" class="mb-1 w-50 h-30 object-cover" />
+      <i class="fas fa-command fa-2x mb-4"></i>
+      <h3 class="font-extrabold text-lg text-center">Kadayawan</h3>
+    </div>
+  </div>
+</div>
+    </section>
+  </main>
+</body>
+</html>
