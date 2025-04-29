@@ -1,58 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Philippine Festival - login</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  
+
   <style>
     body {
+      margin: 0;
       font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e6319a 0%, #829ed8 100%);
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .form-box {
+      width: 320px;
+      padding: 2rem;
+      padding-top: 4rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      background-color: rgba(10, 36, 99, 0.7);
+      border-radius: 0.5rem;
+    }
+
+    .input-icon {
+      background-color: #0a2463;
+      padding: 0.75rem;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-icon i {
+      color: white;
+      font-size: 1.125rem;
+    }
+
+    .input-field {
+      flex: 1;
+      padding: 0.75rem;
+      border: none;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      background-color: rgba(10, 36, 99, 0.5);
+      color: white;
+    }
+
+    .input-field::placeholder {
+      color: white;
+      opacity: 0.7;
+    }
+
+    .input-field:focus {
+      outline: none;
+    }
+
+    .button {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 9999px;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 0.1em;
+      padding: 0.75rem 5rem;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+    }
+
+    .button:hover {
+      filter: brightness(1.1);
+    }
+
+    .login-btn {
+      bottom: -4rem;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+    }
+
+    .signup-btn {
+      bottom: -8rem;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .avatar {
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5rem;
+      height: 5rem;
+      border-radius: 9999px;
+      background-color: #0a2463;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .avatar i {
+      color: white;
+      font-size: 3rem;
+      cursor: pointer;
     }
   </style>
 </head>
-
 <body>
-  <div class="min-h-screen flex items-center justify-center" style="background: linear-gradient(135deg, #e6319a 0%, #829ed8 100%)">
-    <div class="relative">
-      <div class="rounded-3xl bg-white bg-opacity-30 backdrop-blur-md w-80 p-8 pt-16 shadow-lg">
-        <form id="loginForm" class="space-y-6">
-          <div class="flex items-center bg-blue-900 bg-opacity-70 rounded">
-            <div class="bg-blue-900 p-3 rounded-l">
-              <i class="fas fa-user text-white text-lg"></i>
-            </div>
-            <input id="loginUsername" type="text" placeholder="Username"
-              class="bg-blue-900 bg-opacity-50 text-white placeholder-white placeholder-opacity-70 p-3 flex-1 rounded-r focus:outline-none" />
+  <div class="container">
+    <div class="form-box">
+      <form id="loginForm">
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="fas fa-user"></i>
           </div>
+          <input id="loginUsername" type="text" class="input-field" placeholder="Username" />
+        </div>
 
-          <div class="flex items-center bg-blue-900 bg-opacity-70 rounded">
-            <div class="bg-blue-900 p-3 rounded-l">
-              <i class="fas fa-lock text-white text-lg"></i>
-            </div>
-            <input id="loginPassword" type="password" placeholder="Password"
-              class="bg-blue-900 bg-opacity-50 text-white placeholder-white placeholder-opacity-70 p-3 flex-1 rounded-r focus:outline-none" />
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="fas fa-lock"></i>
           </div>
-        </form>
-      </div>
+          <input id="loginPassword" type="password" class="input-field" placeholder="Password" />
+        </div>
+      </form>
+    </div>
 
-      <!-- LOGIN Button -->
-      <button onclick="login()" class="absolute -bottom-16 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-b from-white/50 to-white/20 text-white text-sm tracking-widest px-20 py-3 hover:brightness-110 transition duration-300">
-        LOGIN
-      </button>
+    <!-- LOGIN Button -->
+    <button onclick="login()" class="button login-btn">LOGIN</button>
 
-      <!-- SIGN UP Button -->
-      <button onclick="goSignup()" class="absolute -bottom-32 left-1/2 -translate-x-1/2 rounded-full bg-white/40 text-white text-sm tracking-widest px-20 py-3 hover:brightness-110 transition duration-300">
-        SIGNUP
-      </button>
+    <!-- SIGN UP Button -->
+    <button onclick="goSignup()" class="button signup-btn">SIGNUP</button>
 
-      <div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-blue-900 rounded-full w-20 h-20 flex items-center justify-center">
-        <a href="javascript:history.back()">
-          <i class="fas fa-user text-white text-5xl cursor-pointer"></i>
-        </a>
-      </div>
+    <!-- Avatar Icon -->
+    <div class="avatar">
+      <a href="index.html">
+        <i class="fas fa-user"></i>
+      </a>
     </div>
   </div>
 
@@ -66,14 +171,14 @@
 
       if (username === storedUsername && password === storedPassword) {
         alert('Login Successful!');
-        window.location.href = 'welcome.html'; // Redirect to Welcome page
+        window.location.href = 'welcome.html';
       } else {
         alert('Incorrect Username or Password. Please sign up first!');
       }
     }
 
     function goSignup() {
-      window.location.href = 'signup.html'; // Redirect to Sign up page
+      window.location.href = 'signup.html';
     }
   </script>
 </body>
