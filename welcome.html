@@ -4,215 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Philippine Festival</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #913a92;
-    }
-
-    header {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      color: white;
-      font-size: 1.25rem;
-      font-weight: 800;
-      user-select: none;
-    }
-
-    .logo span {
-      color: #f9a03f;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding-bottom: 4px;
-      border-bottom: 2px solid transparent;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-      border-bottom-color: #f9a03f;
-    }
-
-    /* Dropdown */
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown ul {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: white;
-      border-radius: 4px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      display: none;
-      flex-direction: column;
-      width: 160px;
-      padding: 8px 0;
-      z-index: 1000;
-    }
-
-    .dropdown:hover ul {
-      display: flex;
-    }
-
-    .dropdown ul a {
-      color: #444;
-      padding: 10px 16px;
-      display: block;
-      text-decoration: none;
-    }
-
-    .dropdown ul a:hover {
-      background-color: #f0f0f0;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
-
-    .hero-section {
-      position: relative;
-      background-color: #0c7a6e;
-      padding: 60px 0 140px;
-    }
-
-    .hero-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    @media (min-width: 768px) {
-      .hero-container {
-        flex-direction: row;
-        padding: 0 24px;
-      }
-    }
-
-    .hero-text {
-      color: white;
-      max-width: 600px;
-      margin: -129px 0 0 12px;
-    }
-
-    .hero-text h1 {
-      display: flex;
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-      line-height: 1.2;
-    }
-
-    .hero-text h1 span {
-      color: black;
-      font-size: 6rem;
-      line-height: 1;
-    }
-
-    .hero-text h1 div {
-      margin-left: 8px;
-    }
-
-    .hero-text p {
-      color: black;
-      font-weight: bold;
-      display: flex;
-      font-size: 1rem;
-    }
-
-    .hero-text p span:first-child {
-      font-size: 2rem;
-      margin-right: 12px;
-      line-height: 1;
-    }
-
-    .hero-image img {
-      width: 100%;
-      max-width: 510px;
-      height: auto;
-    }
-
-    /* Boxes */
-    .boxes-wrapper {
-      position: absolute;
-      bottom: -1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      max-width: 1200px;
-      padding: 0 24px;
-    }
-
-    .boxes {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      margin-bottom: -64px;
-    }
-
-    @media (min-width: 640px) {
-      .boxes {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 768px) {
-      .boxes {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .box {
-      background: white;
-      border-radius: 12px;
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: black;
-      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .box img {
-      width: 100%;
-      max-width: 200px;
-      height: 120px;
-      object-fit: cover;
-      margin-bottom: 12px;
-    }
-
-    .box h3 {
-      font-weight: 800;
-      font-size: 1.1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="welcome.css" />
 </head>
-
 <body>
   <header>
     <div class="logo">Festival<span>.</span></div>
@@ -225,9 +18,10 @@
           <a href="#">Categories</a>
           <ul>
             <li><a href="sinulog.html">Sinulog</a></li>
-            <li><a href="#">Ati-Atihan</a></li>
-            <li><a href="#">Panagbenga</a></li>
-            <li><a href="#">Pahiyas</a></li>
+            <li><a href="atiatihan.html">Ati-Atihan</a></li>
+            <li><a href="panagbenga.html">Panagbenga</a></li>
+            <li><a href="pahiyas.html">Pahiyas</a></li>
+            <li><a href="kadayawan.html">Kadayawan</a></li>
           </ul>
         </li>
       </ul>
@@ -235,8 +29,8 @@
   </header>
 
   <main>
-    <section class="hero-section">
-      <div class="hero-container">
+    <section class="hero">
+      <div class="hero-content">
         <div class="hero-text">
           <h1>
             <span>W</span>
@@ -247,37 +41,32 @@
           </h1>
           <p>
             <span>D</span>
-            <span>
-              ive into the vibrant celebrations, explore the rich culture,<br />
-              and enjoy the unforgettable experience. We're glad you're here!
-            </span>
+            <span>ive into the vibrant celebrations, explore the rich culture,
+              and enjoy the unforgettable experience. We're glad you're here!</span>
           </p>
         </div>
         <div class="hero-image">
-          <img src="images/fes.jpg" alt="Festival scene">
+          <img src="images/fes.jpg" alt="Festival scene" />
         </div>
       </div>
+    </section>
 
-      <!-- Boxes Section -->
-      <div class="boxes-wrapper">
-        <div class="boxes">
-          <div class="box">
-            <img src="images/sinulog.jpg" alt="Sinulog Festival">
-            <h3>Sinulog</h3>
-          </div>
-          <div class="box">
-            <img src="images/panagbenga.jpg" alt="Panagbenga Festival">
-            <h3>Panagbenga</h3>
-          </div>
-          <div class="box">
-            <img src="images/pahiyas.jpeg" alt="Pahiyas Festival">
-            <h3>Pahiyas</h3>
-          </div>
-          <div class="box">
-            <img src="images/kadayawan.jpg" alt="Kadayawan Festival">
-            <h3>Kadayawan</h3>
-          </div>
-        </div>
+    <section class="festival-cards">
+      <div class="festival-card">
+        <img src="images/sinulog.jpg" alt="Sinulog" />
+        <h3>Sinulog</h3>
+      </div>
+      <div class="festival-card">
+        <img src="images/panagbenga.jpg" alt="Panagbenga" />
+        <h3>Panagbenga</h3>
+      </div>
+      <div class="festival-card">
+        <img src="images/pahiyas.jpeg" alt="Pahiyas" />
+        <h3>Pahiyas</h3>
+      </div>
+      <div class="festival-card">
+        <img src="images/kadayawan.jpg" alt="Kadayawan" />
+        <h3>Kadayawan</h3>
       </div>
     </section>
   </main>

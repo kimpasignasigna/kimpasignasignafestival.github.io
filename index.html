@@ -4,191 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Philippine Festival</title>
-  <style>
-    /* Base styles */
-    body {
-      font-family: "Poppins", sans-serif;
-      background-color: #913a92;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .logo {
-      color: white;
-      font-weight: 800;
-      font-size: 2rem;
-    }
-
-    .logo span {
-      color: #f9a03f;
-    }
-
-    nav ul {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      font-size: 1.125rem;
-      border-bottom: 2px solid #f9a03f;
-      padding-bottom: 4px;
-      transition: 0.2s;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 24px 16px 128px;
-    }
-
-    .hero {
-      background-color: #0c7a6e;
-      border-radius: 16px;
-      padding: 24px;
-    }
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .hero-text {
-      color: white;
-      width: 100%;
-    }
-
-    .hero-text h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-    }
-
-    .hero-text h1 span:first-child {
-      color: black;
-      font-size: 3.5rem;
-      margin-right: 12px;
-    }
-
-    .hero-text p {
-      font-size: 1rem;
-      font-weight: 700;
-      color: black;
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .hero-text p span:first-child {
-      font-size: 2rem;
-      line-height: 1;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .festival-cards {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      margin-top: 64px;
-    }
-
-    .festival-card {
-      background-color: white;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .festival-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 12px;
-    }
-
-    .festival-card h3 {
-      font-size: 1.125rem;
-      font-weight: 800;
-      color: black;
-    }
-
-    /* Responsive Layout */
-    @media (min-width: 640px) {
-      header {
-        flex-direction: row;
-      }
-
-      nav ul {
-        flex-direction: row;
-        gap: 24px;
-      }
-
-      .hero-content {
-        flex-direction: row;
-      }
-
-      .hero-text,
-      .hero-image {
-        width: 50%;
-      }
-
-      .festival-cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .festival-cards {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      .hero-text h1 {
-        font-size: 3rem;
-      }
-
-      .hero-text h1 span:first-child {
-        font-size: 4.5rem;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
   <!-- Header -->
   <header>
@@ -203,48 +21,23 @@
 
   <!-- Main -->
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="hero-text">
+    <!-- Adventure Tours Section -->
+    <section class="adventure-section">
+      <div class="content">
+        <div class="adventure-text">
           <h1>
-            <span>W</span>
-            <span>
-              <div>elcome</div>
-              <div>to the festival!</div>
-            </span>
+            <span style="font-size: 6rem; font-weight: bold;">P</span>hilippine festival <br>
+            <span> Welcome Travelers.</span>
           </h1>
           <p>
-            <span>D</span>
-            <span>
-              ive into the vibrant celebrations, explore the rich culture,
-              and enjoy the unforgettable experience. We're glad you're here!
-            </span>
+            Experience the vibrant spirit of the Philippines as we take you on a colorful journey through our most iconic festivals 
+            from the lively street parades and traditional dances to the rich heritage, warm smiles, 
+            and unforgettable cultural celebrations that define the Filipino soul.
           </p>
         </div>
-        <div class="hero-image">
-          <img src="images/fes.jpg" alt="Festival scene" />
+        <div class="adventure-image">
+          <img src="images/lading.jpg" alt="Adventure tour scene">
         </div>
-      </div>
-    </section>
-
-    <!-- Festival Cards -->
-    <section class="festival-cards">
-      <div class="festival-card">
-        <img src="images/sinulog.jpg" alt="Sinulog" />
-        <h3>Sinulog</h3>
-      </div>
-      <div class="festival-card">
-        <img src="images/panagbenga.jpg" alt="Panagbenga" />
-        <h3>Panagbenga</h3>
-      </div>
-      <div class="festival-card">
-        <img src="images/pahiyas.jpeg" alt="Pahiyas" />
-        <h3>Pahiyas</h3>
-      </div>
-      <div class="festival-card">
-        <img src="images/kadayawan.jpg" alt="Kadayawan" />
-        <h3>Kadayawan</h3>
       </div>
     </section>
   </main>

@@ -1,0 +1,157 @@
+
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      background-color: #913a92;
+    }
+
+    header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      color: white;
+      font-weight: 800;
+      font-size: 2rem;
+    }
+
+    .logo span {
+      color: #f9a03f;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border-bottom: 2px solid #f9a03f;
+      padding-bottom: 4px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 100px); /* Adjust based on header height */
+      overflow: hidden;
+      padding: 0 16px;
+      box-sizing: border-box;
+    }
+
+    .adventure-section {
+      background: linear-gradient(to bottom, #d9f0e7, white);
+      border-radius: 16px;
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      overflow: auto;
+    }
+
+    .adventure-section .content {
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+  height: 100%;
+    }
+
+    .adventure-text {
+      max-width: 600px;
+      color: #1e293b;
+      text-align: left;
+    }
+
+    .adventure-text h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-left: 30px;
+    }
+
+    .adventure-text h1 span {
+      color: #3bb78f;
+    }
+
+    .adventure-text p {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #1e293b;
+      margin-bottom: 120px;
+    }
+
+    .adventure-image {
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+    }
+
+    .adventure-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: #3bb78f;
+      border-radius: 120px 0 0 120px;
+      z-index: -1;
+    }
+
+    .adventure-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 120px 0 0 120px;
+    }
+
+    @media (min-width: 640px) {
+      header {
+        flex-direction: row;
+      }
+
+      nav ul {
+        flex-direction: row;
+        gap: 24px;
+      }
+
+      .adventure-section .content {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .adventure-text,
+      .adventure-image {
+        width: 50%;
+      }
+    }

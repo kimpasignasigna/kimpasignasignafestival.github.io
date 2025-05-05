@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Philippine Festival - Sinulog</title>
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calendarsinulog.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        Festival<span>.</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="atiatihan.html">Atiatihan</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Calendar Component -->
+    <div class="calendar-wrapper" role="main" aria-label="2024 January Calendar">
+      <div class="left-panel">
+        <img src="images/1.jpg" style="width: 100%;height: 100%;object-fit: cover;" alt="Sinulog" class="camera-icon" />
+      </div>      
+      <div class="middle-shapes" aria-hidden="true">
+        <div class="shape-top">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#2a8f4d" />
+                <stop offset="100%" stop-color="#c1d94a" />
+              </linearGradient>
+            </defs>
+            <path d="M0,0 L100,0 L50,100 L0,100 Z" fill="url(#grad1)" stroke="#f0f0f0" stroke-width="3" />
+          </svg>
+        </div>
+        <div class="shape-bottom">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#2a8f4d" />
+                <stop offset="100%" stop-color="#c1d94a" />
+              </linearGradient>
+            </defs>
+            <path d="M0,100 L100,100 L50,0 L0,0 Z" fill="url(#grad2)" stroke="#f0f0f0" stroke-width="3" />
+          </svg>
+        </div>
+      </div>
+      <div class="right-panel">
+        <p class="year">2025</p>
+        <p class="month">JANUARY</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Su</th>
+              <th>Mo</th>
+              <th>Tu</th>
+              <th>We</th>
+              <th>Th</th>
+              <th>Fr</th>
+              <th>Sa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>1</td>             
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>15</td>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td id="day-cell4"><span class="cell-number">19</span>
+              <div id="label4" style="display: none;">Ati-Atihan Festival</div>
+              </td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>22</td>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+                <td>26</td>
+              <td>27</td>
+            </tr>
+            <tr>
+              <td>28</td>
+              <td>29</td>
+              <td>30
+              </td>              
+              <td>31</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="calendarsinulog.js"></script>
+  </body>
+</html>
