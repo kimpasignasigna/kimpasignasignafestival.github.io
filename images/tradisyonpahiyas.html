@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Philippine Festival - Pahiyas</title>
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        overflow: auto;
+        font-family: 'Inter', sans-serif;
+        background-color: #050505;
+      }
+
+      header {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 1.5rem;
+      }
+
+      .logo {
+        color: white;
+        font-weight: 800;
+        font-size: 1.25rem;
+        user-select: none;
+      }
+
+      .logo span {
+        color: #f9a03f;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 1.5rem;
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 600;
+        list-style: none;
+      }
+
+      nav a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 2px solid #f9a03f;
+        padding-bottom: 0.25rem;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* ========== TEAM SECTION STYLES ========== */
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1120px;
+        width: 100%;
+        margin: 64px auto;
+        padding: 0 24px;
+      }
+
+      section {
+        max-width: 280px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 32px;
+        border-radius: 24px;
+      }
+
+      section img {
+        width: 150px;
+        height: 150px;
+        border-radius: 24px;
+        object-fit: cover;
+        margin-bottom: 16px;
+      }
+
+      .center {
+        background-color: #a6c7d1;
+      }
+
+      p.role {
+        font-size: 10px;
+        color: #d1d5db;
+        text-transform: uppercase;
+        margin: 0 0 4px 0;
+        user-select: none;
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: 18px;
+        color: #000;
+        margin: 0 0 8px 0;
+      }
+
+      p.description {
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 230px;
+        margin: 0;
+        color: #4b5563;
+      }
+
+      .center p.description {
+        color: #1f2937;
+      }
+
+      @media (max-width: 640px) {
+        main {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Festival<span>.</span></div>
+      <nav>
+        <ul>
+          <li><a href="pahiyas.html">Pahiyas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 🌟 Team Section Start -->
+    <main>
+      <section>
+        <img src="images/pahiyasdance.jfif" alt="Portrait of smiling Black woman" />
+        <h2>Dance</h2>
+        <p class="description">•	Traditional Filipino dances such as Pandanggo sa Ilaw, Tinikling, and Sayaw sa Bangko are performed.<br>
+            •	Some processions also feature harvest dances.
+             </p>
+      </section>
+      <section class="center">
+        <img src="images/pahiyascloths.jfif" alt="Portrait of smiling woman with glasses" />
+        <h2>Cloth</h2>
+        <p class="description">•	Locals wear traditional Filipino clothing like barong Tagalog and baro't saya.<br>
+            •	Some wear costumes made from vegetables, rice stalks, or woven materials.
+             </p>
+      </section>
+      <section>
+        <img src="images/pahiyasmusic.jfif" alt="Portrait of smiling woman in navy top" />
+        <h2>Music</h2>
+        <p class="description">•	Folk music is common, along with performances from local marching bands.
+            <br>
+            •	Instruments include guitars, flutes, and kulintang in some parts.
+            </p>
+      </section>
+    </main>
+    <!-- 🌟 Team Section End -->
+  </body>
+</html>

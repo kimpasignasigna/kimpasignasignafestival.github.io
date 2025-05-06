@@ -1,0 +1,130 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: auto;
+  font-family: 'Inter', sans-serif;
+  background-color: #050505;
+}
+
+header {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+}
+
+.logo {
+  color: white;
+  font-weight: 800;
+  font-size: 1.25rem;
+  user-select: none;
+}
+
+.logo span {
+  color: #f9a03f;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid #f9a03f;
+  padding-bottom: 0.25rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Carousel styles (added) */
+.carousel-container {
+  perspective: 1500px;
+  perspective-origin: 50% 50%;
+}
+.carousel {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 320px;
+}
+.carousel img {
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 0.1);
+  transition: transform 0.5s ease, filter 0.5s ease;
+  flex-shrink: 0;
+  width: 160px;
+  height: 320px;
+  object-fit: cover;
+  transform-origin: center center;
+}
+.carousel img.center {
+  width: 200px;
+  height: 320px;
+  filter: none;
+  transform: translateZ(100px) scale(1.1);
+  z-index: 10;
+}
+.carousel img.left2 {
+  transform: rotateY(30deg) translateX(-60px) translateZ(-40px) scale(0.85);
+  filter: brightness(0.85);
+  z-index: 5;
+}
+.carousel img.left1 {
+  transform: rotateY(15deg) translateX(-30px) translateZ(0) scale(0.95);
+  filter: brightness(0.9);
+  z-index: 7;
+}
+.carousel img.right1 {
+  transform: rotateY(-15deg) translateX(30px) translateZ(0) scale(0.95);
+  filter: brightness(0.9);
+  z-index: 7;
+}
+.carousel img.right2 {
+  transform: rotateY(-30deg) translateX(60px) translateZ(-40px) scale(0.85);
+  filter: brightness(0.85);
+  z-index: 5;
+}
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1.5px solid #d1d5db;
+  background-color: white;
+  color: #6b7280;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-circle:hover {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: white;
+}
+.btn-circle.orange {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: white;
+}
